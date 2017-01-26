@@ -18,5 +18,5 @@ for x in lines:
     ylist_fin.append(x.split(' ')[2])
 f.close()
 
-print(xlist_init[1])
+
 pyraf.xyxymatch(xlist_init, xlist_fin)
