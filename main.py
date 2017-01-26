@@ -21,7 +21,7 @@ plt.plot(my_listx, my_listy, 'ro')
 
 plt.savefig('initial_plot.png', bbox_inches='tight')
 print('init_coordinates.txt \n', my_listx, "\n", my_listy)
-ascii.write([my_listx, my_listy], 'init_coordinates.txt', names=('x','y'), overwrite=True)
+ascii.write([my_listx, my_listy], 'init_coordinates.txt', comment=True, names=('#x','y'), overwrite=True)
 plt.show()
 plt.close()
 
@@ -38,7 +38,7 @@ else:
     for x in range(0, num, 1):
         my_listy[x]=my_listy[x]+shift
 print('fin_coordinates.txt \n', my_listx, '\n', my_listy)
-ascii.write([my_listx, my_listy], 'fin_coordinates.txt', names=('x', 'y'), overwrite=True)
+ascii.write([my_listx, my_listy], 'fin_coordinates.txt', names=('#x', 'y'), overwrite=True)
 
 #plot and save graph which has had its values shifted
 plt2.plot(my_listx,my_listy, 'ro')
