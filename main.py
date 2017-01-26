@@ -5,7 +5,7 @@ from astropy.io import ascii
 
 plt2=plt
 num = input("Enter number of coordinates: ")
-shift = random.randint(1,6)
+shift = random.uniform(1,6)
 my_listx = []
 my_listy = []
 shiftlist = ['shift value:', shift]
@@ -13,8 +13,8 @@ shiftlist = ['shift value:', shift]
 ascii.write([shiftlist], 'shift.txt', overwrite=True)
 #fill x,y lists with random values
 for x in range(0, num, 1):
-    my_listx.append(random.randint(0,100))
-    my_listy.append(random.randint(0,100))
+    my_listx.append(random.uniform(0,100))
+    my_listy.append(random.uniform(0,100))
 
 #plot  and save initial plot with random values
 plt.plot(my_listx, my_listy, 'ro')
